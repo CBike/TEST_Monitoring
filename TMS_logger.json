@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "formatters": {
+  "basic": {
+  "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  }
+},
+
+"handlers": {
+  "stream_handler": {
+  "class": "logging.StreamHandler",
+  "level": "INFO",
+  "formatter": "basic",
+  "stream": "ext://sys.stdout"
+  },
+
+  "info_file_handler": {
+  "class": "logging.FileHandler",
+  "level": "INFO",
+  "formatter": "basic",
+  "filename": "C:\\TMS\\log\\tms_log.log"
+  }
+},
+
+"root": {
+"level": "DEBUG",
+"handlers": ["stream_handler", "info_file_handler"]
+},
+
+  "Server": {
+    "level": "INFO",
+    "handlers": ["stream_handler", "info_file_handler"]
+  },
+  "Client": {
+    "level": "INFO",
+    "handlers": ["stream_handler", "info_file_handler"]
+  }
+}
+

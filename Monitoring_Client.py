@@ -30,12 +30,11 @@ class Client():
             return client_socket
         except Exception as e:
             self.logger.info('Connect Server Exception :{}'.format(e))
-    # def send_message(self,message):
-    #
-    # def release
 
 if __name__ == '__main__':
 
     client = Client()
 
+    HOST = ''
+    PORT =
     client.connect_server(HOST, PORT, '0')
